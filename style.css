@@ -25,7 +25,7 @@
   --font-regular: 18px;
   --font-small: 16px;
   --font-micro: 14px;
-
+  --font-section2: 0.8em;
   /* Font weight */
   --weight-bold: 700;
   --weight-semi-bold: 600;
@@ -90,12 +90,15 @@ h3 {
 }
 
 p {
-  font-size: var(--font-regular);
+  font-size: 1em;
   font-weight: var(--weight-regular);
-  color: var(--color-black);
+  color: var(--color-dark-grey);
   margin: 4px 0;
 }
-
+dd {
+  margin: 0;
+  padding: 0;
+}
 #navbar {
   width: 100%;
   position: fixed;
@@ -110,7 +113,7 @@ p {
 }
 
 #navbar.navbar--dark {
-  background-color: var(--color-pink);
+  background-color: #00c4cc;
   padding: 8px;
 }
 
@@ -142,8 +145,7 @@ p {
 
 /* Home */
 #home {
-  background: url("imgs/homebackground-200515-154505.png") center/cover
-    no-repeat;
+  background: url("imgs/main.png") center/cover no-repeat;
   padding: 40px;
   padding-top: 120px;
   text-align: center;
@@ -220,9 +222,127 @@ p {
 }
 
 .major__description {
-  font-size: var(--font-small);
+  font-size: var(--font-section2);
 }
 
+/*여기 테스트 */
+.section2 {
+  margin: auto;
+  text-align: center;
+}
+.iwill {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background-color: #262626;
+}
+
+.iwill::before {
+  position: absolute;
+  left: 7%;
+  top: 330px;
+  min-width: 86%;
+  height: 0;
+  border-bottom: 1px dashed #cccccc;
+  content: "";
+}
+
+.iwill > h3 {
+  height: 100px;
+  color: #fff;
+  line-height: 100px;
+  text-indent: -5px;
+  font-weight: 800;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.iwill > div > dl {
+  position: absolute;
+  top: 100px;
+  width: 300px;
+  text-align: center;
+}
+
+.iwill > div > dl:nth-child(1) {
+  left: 7%;
+}
+.iwill > div > dl:nth-child(2) {
+  left: 50%;
+  margin-left: -150px;
+}
+.iwill > div > dl:nth-child(3) {
+  right: 7%;
+}
+
+.iwill > div > dl > dt > strong {
+  display: block;
+  margin-top: 250px;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 40px;
+}
+
+.iwill > div > dl > dt > strong::before {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: 200px;
+  background-position: 50% 50%;
+  background-size: cover;
+  content: "";
+}
+
+.iwill > div > dl:nth-child(1) > dt > strong::before {
+  background-image: url("/portfolio-master/imgs/aboutme/iwill_01.jpg");
+}
+
+.iwill > div > dl:nth-child(2) > dt > strong::before {
+  background-image: url("/portfolio-master/imgs/aboutme/iwill_02.jpg");
+}
+
+.iwill > div > dl:nth-child(3) > dt > strong::before {
+  background-image: url("/portfolio-master/imgs/aboutme/iwill_03.jpg");
+}
+
+.iwill > div > dl > dt > strong::after {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 210px;
+  width: 10px;
+  height: 10px;
+  margin-left: -5px;
+  background-color: #fff;
+  border-radius: 5px;
+  content: "";
+}
+
+.iwill > div > dl:nth-child(1) > dt > strong {
+  color: orange;
+}
+.iwill > div > dl:nth-child(2) > dt > strong {
+  color: #42a7ff;
+}
+.iwill > div > dl:nth-child(3) > dt > strong {
+  color: yellow;
+}
+
+.iwill > div > dl > dd {
+  color: #a6a5a5;
+  line-height: 1.8;
+  font-size: var(--font-section2);
+}
+
+.iwill > div > dl > dd > q {
+  color: #fff;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+/*테스트 끝 */
 .job {
   display: flex;
   align-items: center;
@@ -255,19 +375,20 @@ p {
 
 .skillset {
   display: flex;
-  background-color: var(--color-light-grey);
+  background-color: #203354;
   color: var(--color-light-white);
   margin: 20px 0;
+  box-shadow: 0px 0px 10px 0px #23395d;
 }
 
 .skillset__left {
   flex-basis: 60%;
-  background-color: var(--color-dark-grey);
+  background-color: #192841;
   padding: 20px 40px;
 }
 
 .skill {
-  margin-bottom: 8px;
+  margin-bottom: 20px;
 }
 
 .skill__description {
@@ -288,7 +409,7 @@ p {
   flex-basis: 40%;
 }
 .tools {
-  background-color: var(--color-grey);
+  background-color: #1c2e4a;
 }
 
 .tools,
@@ -449,7 +570,7 @@ p {
 /* Contact */
 
 #contact {
-  background-color: var(--color-pink);
+  background-color: #00c4cc;
 }
 .contact__title {
   margin: 32px 0;
@@ -483,7 +604,7 @@ p {
   height: 70px;
   font-size: 50px;
   color: white;
-  background-color: var(--color-pink);
+  background-color: #004aad;
   border-radius: 50%;
   opacity: 0;
   pointer-events: none;
@@ -584,4 +705,54 @@ p {
     right: 16px;
     bottom: 16px;
   }
+
+  /*테스트*/
+  .iwill {
+    position: initial;
+    height: initial;
+    padding-bottom: 50px;
+  }
+
+  .iwill::before {
+    display: none;
+  }
+
+  .iwill > div > dl {
+    position: initial;
+    width: 100%;
+    margin-top: 50px;
+    text-align: left;
+  }
+
+  .iwill > div > dl:nth-child(1) {
+    margin-top: 0;
+  }
+  .iwill > div > dl:nth-child(2) {
+    margin-left: 0;
+  }
+  .iwill > div > dl > dt > strong::before {
+    position: initial;
+    width: 100%;
+    height: 350px;
+  }
+
+  .iwill > div > dl > dt > strong {
+    margin-top: 0;
+  }
+  .iwill > div > dl > dt > strong > span {
+    display: block;
+    text-indent: 10px;
+  }
+
+  .iwill > div > dl > dt > strong::after {
+    display: none;
+  }
+  .iwill > div > dl > dd {
+    margin: 0 10px;
+  }
+  .iwill > div > dl > dd br {
+    display: none;
+  }
+
+  /*테스트 끝*/
 }
