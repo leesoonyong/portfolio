@@ -17,6 +17,8 @@
   --color-yellow: #fff7d1;
   --color-orange: #feb546;
   --color-black: #000000;
+  --color-main: #00c4cc;
+  --color-sub: #004aad;
 
   /* Font size */
 
@@ -109,11 +111,11 @@ dd {
   align-items: center;
   color: var(--color-white);
   padding: 16px;
-  z-index: 1;
+  z-index: 2;
 }
 
 #navbar.navbar--dark {
-  background-color: #00c4cc;
+  background-color: var(--color-main);
   padding: 8px;
 }
 
@@ -131,7 +133,7 @@ dd {
 
 .navbar__menu__item:hover {
   border: 1px solid var(--color-white);
-  background-color: var(--color-dark-pink);
+  background-color: var(--color-sub);
 }
 
 .navbar__toggle-btn {
@@ -296,15 +298,15 @@ dd {
 }
 
 .iwill > div > dl:nth-child(1) > dt > strong::before {
-  background-image: url("/portfolio-master/imgs/aboutme/iwill_01.jpg");
+  background-image: url("/imgs/aboutme/iwill_01.jpg");
 }
 
 .iwill > div > dl:nth-child(2) > dt > strong::before {
-  background-image: url("/portfolio-master/imgs/aboutme/iwill_02.jpg");
+  background-image: url("/imgs/aboutme/iwill_02.jpg");
 }
 
 .iwill > div > dl:nth-child(3) > dt > strong::before {
-  background-image: url("/portfolio-master/imgs/aboutme/iwill_03.jpg");
+  background-image: url("/imgs/aboutme/iwill_03.jpg");
 }
 
 .iwill > div > dl > dt > strong::after {
@@ -431,7 +433,7 @@ dd {
 
 .category__btn.selected,
 .category__btn:hover {
-  background-color: var(--color-pink);
+  background-color: var(--color-main);
   color: var(--color-white);
 }
 
@@ -442,7 +444,7 @@ dd {
 }
 
 .category__count {
-  background-color: var(--color-orange);
+  background-color: var(--color-sub);
   border-radius: 50%;
   color: var(--color-white);
   width: 24px;
@@ -524,7 +526,7 @@ dd {
   background-color: var(--color-dark-white);
 }
 
-/* Testimonial */
+/* Testimonial 
 #testimonials {
   background-color: var(--color-light-white);
 }
@@ -566,11 +568,45 @@ dd {
 .testimonial__speech-bubble a {
   color: var(--color-pink);
 }
+*/
+
+/*Exprience*/
+
+.swiper-container {
+  height: 400px;
+  padding: 30px;
+}
+
+.mutifle {
+  margin: 40px 0;
+}
+.swiper-slide {
+  text-align: center;
+}
+
+.swiper-slide img {
+  max-width: 100%;
+  height: 310px; /* 이미지 최대너비를 제한, 슬라이드에 이미지가 여러개가 보여질때 필요 */
+  /* 이 예제에서 필요해서 설정했습니다. 상황에따라 다를 수 있습니다. */
+}
+
+.swiper-slide .description {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Noto Sans KR";
+  color: var(--color-dark-grey);
+}
+
+#exprience {
+  background-color: #f8f8fa;
+  padding-bottom: 100px;
+}
 
 /* Contact */
 
 #contact {
-  background-color: #00c4cc;
+  background-color: var(--color-main);
 }
 .contact__title {
   margin: 32px 0;
@@ -604,7 +640,7 @@ dd {
   height: 70px;
   font-size: 50px;
   color: white;
-  background-color: #004aad;
+  background-color: var(--color-sub);
   border-radius: 50%;
   opacity: 0;
   pointer-events: none;
@@ -636,7 +672,8 @@ dd {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
-    background-color: var(--color-pink);
+    background-color: var(--color-main);
+    z-index: 2;
   }
   #navbar.navbar--dark {
     padding: 16px;
