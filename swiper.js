@@ -3,7 +3,7 @@ var mySwiper = new Swiper(".swiper-container", {
   // 3개가 나와야 되는데 1개만 있다면 2개는 빈칸으로 채워서 3개를 만듬
   loopFillGroupWithBlank: true,
 
-  loop: true, // 무한 반복
+  loop: false, // 무한 반복
 
   slidesPerView: 1,
   spaceBetween: 10,
