@@ -200,33 +200,60 @@ dd {
   justify-content: space-between;
   margin: 80px 0;
 }
-.major__icon {
-  width: 170px;
-  height: 170px;
-  line-height: 170px;
-  font-size: 70px;
-  border: 1px solid var(--color-blue);
-  margin: auto;
-  border-radius: 50%;
-  margin-bottom: 16px;
+
+#img {
+  box-shadow: 0px 0px 10px 0px var(--color-dark-grey);
 }
 
-.major__icon i {
-  transition: all 300ms ease;
+#about > div {
+  width: 1300px;
+  margin: 0 auto;
+  padding-top: 70px;
+  height: 650px;
 }
 
-.major__icon:hover i {
-  color: var(--color-pink);
-  transform: rotate(-30deg) scale(1.1);
+.me {
+  font-weight: bold;
+  font-size: 30px;
+  font-family: "Noto Sans KR";
 }
 
-.major__title,
-.major__description {
+.me > strong {
+  color: var(--color-main);
+  border-bottom: 3px solid black;
+  font-family: "Noto Sans KR";
+}
+
+#about > div > div {
+  float: left;
+}
+
+#about > div > div:last-child {
+  width: 700px;
+  margin-left: 100px;
+  text-align: left;
+  font-family: "Noto Sans KR";
+}
+
+#about > div > div > h3 {
+  margin-top: 40px;
   color: var(--color-dark-grey);
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Noto Sans KR";
 }
 
-.major__description {
-  font-size: var(--font-section2);
+#about > div > div > p {
+  font-size: 14px;
+  line-height: 2.5;
+  margin-top: 15px;
+}
+
+#about > div > div > .ican > li {
+  width: 345px;
+  height: 40px;
+  font-size: 18px;
+  line-height: 40px;
 }
 
 /*여기 테스트 */
@@ -371,6 +398,15 @@ dd {
 
 #skills {
   background-color: var(--color-yellow);
+}
+
+#skills > div > h2 {
+  margin: 20px 0;
+}
+
+#skills > div > p {
+  font-family: "Noto Sans KR";
+  margin: 20px 0;
 }
 
 .skillset__title {
@@ -574,6 +610,47 @@ dd {
 
 /*Exprience*/
 
+#experience {
+  background-color: #3961c9;
+}
+
+#experience > div > h1 {
+  color: white;
+}
+
+#experience > div > h3 {
+  color: white;
+  font-family: "Noto Sans KR";
+  font-size: var(--font-medium);
+  font-weight: bold;
+}
+#experience > div > h3 > strong {
+  color: yellow;
+}
+#experience div > ul > .swiper-button-prev {
+  width: 29px;
+  height: 46px;
+  text-indent: -9999px;
+  overflow: hidden;
+  background: url(/imgs/swiper/왼쪽.png) no-repeat 0 0;
+}
+
+#experience div > ul > .swiper-button-prev:hover {
+  background-image: url(/imgs/swiper/왼쪽호버.png);
+}
+
+#experience div > ul > .swiper-button-next {
+  width: 29px;
+  height: 46px;
+  text-indent: 9999px;
+  overflow: hidden;
+  background: url(/imgs/swiper/오른쪽.png) no-repeat 0 0;
+}
+
+#experience div > ul > .swiper-button-next:hover {
+  background-image: url(/imgs/swiper/오른쪽-호버.png);
+}
+
 .swiper-container {
   padding: 30px;
 }
@@ -583,36 +660,68 @@ dd {
 }
 .swiper-slide {
   text-align: center;
-  background-color: var(--color-white);
 }
 
 .swiper-slide img {
   max-width: 100%;
-  height: 262px; /* 이미지 최대너비를 제한, 슬라이드에 이미지가 여러개가 보여질때 필요 */
+  height: auto; /* 이미지 최대너비를 제한, 슬라이드에 이미지가 여러개가 보여질때 필요 */
   /* 이 예제에서 필요해서 설정했습니다. 상황에따라 다를 수 있습니다. */
+  box-shadow: 0px 0px 20px 0px var(--color-dark-grey);
 }
 
 .swiper-slide .title {
   margin-top: 20px;
-  font-size: 23px;
+  font-size: 30px;
   font-weight: bold;
   font-family: "Noto Sans KR";
-  color: black;
+  color: white;
 }
+.swiper-slide .title:after {
+  content: "";
+  display: block;
+  width: 100px;
+  border-bottom: 3px solid #fff176;
+  margin: 15px auto;
+}
+
 .swiper-slide .description {
   margin-top: 10px;
   padding-bottom: 30px;
   font-size: 15px;
   font-family: "Noto Sans KR";
   text-align: center;
-  color: var(--color-dark-grey);
+  color: var(--color-white);
   line-height: 2;
 }
-
-#experience {
-  background-color: #f6f6f6;
-  padding-bottom: 100px;
+/*experience2*/
+#experience2 {
+  background-image: url(/imgs/Expreince/미래.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background: url(/imgs/Expreince/미래.png) no-repeat center/cover;
+  width: 100%;
+  height: 50vh;
 }
+#experience2 > h1 {
+  color: white;
+  font-family: "Noto Sans KR";
+  margin-top: 45px;
+}
+
+#experience2 > h1 > strong {
+  color: #02e9f2;
+  border-bottom: 3px solid var(--color-white);
+}
+
+#experience2 > p {
+  color: white;
+  font-family: "Noto Sans KR";
+  margin-top: 50px;
+  font-size: 17px;
+}
+
+/*experience2끝*/
 
 /* Contact */
 
@@ -705,6 +814,42 @@ dd {
     padding: 16px;
     padding-top: 40px;
   }
+
+  #about > div {
+    width: 100%;
+    padding: 50px 40px 40px;
+    height: 1300px;
+  }
+
+  #about > div > div:last-child > h2:first-child {
+    margin-top: 40px;
+  }
+  .me {
+    font-size: 20px;
+  }
+
+  #about > div > div:first-child {
+    width: 100%;
+  }
+
+  #about > div > div:first-child img {
+    display: block;
+    width: 240px;
+    margin: 0 auto;
+  }
+  #about > div > div:last-child {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  #about > div > div:last-child h3 {
+    margin-bottom: 0;
+    font-size: 16px;
+  }
+  .about_me > div > div:last-child p {
+    font-size: 12px;
+  }
+
   .about__majors {
     flex-direction: column;
     margin-top: 30px;
@@ -717,6 +862,10 @@ dd {
 
   .skillset {
     flex-direction: column;
+  }
+
+  #skills > p {
+    font-size: 14px;
   }
 
   .category__btn {
@@ -745,6 +894,19 @@ dd {
   .testimonial__speech-bubble {
     order: 1;
   }
+
+  #experience2 {
+    height: 70vh;
+  }
+
+  #experience2 > h1 {
+    font-size: 30px;
+  }
+
+  #experience2 > p {
+    font-size: 14px;
+  }
+
   .arrow-up {
     width: 50px;
     height: 50px;
@@ -753,54 +915,4 @@ dd {
     right: 16px;
     bottom: 16px;
   }
-
-  /*테스트*/
-  .iwill {
-    position: initial;
-    height: initial;
-    padding-bottom: 50px;
-  }
-
-  .iwill::before {
-    display: none;
-  }
-
-  .iwill > div > dl {
-    position: initial;
-    width: 100%;
-    margin-top: 50px;
-    text-align: left;
-  }
-
-  .iwill > div > dl:nth-child(1) {
-    margin-top: 0;
-  }
-  .iwill > div > dl:nth-child(2) {
-    margin-left: 0;
-  }
-  .iwill > div > dl > dt > strong::before {
-    position: initial;
-    width: 100%;
-    height: 350px;
-  }
-
-  .iwill > div > dl > dt > strong {
-    margin-top: 0;
-  }
-  .iwill > div > dl > dt > strong > span {
-    display: block;
-    text-indent: 10px;
-  }
-
-  .iwill > div > dl > dt > strong::after {
-    display: none;
-  }
-  .iwill > div > dl > dd {
-    margin: 0 10px;
-  }
-  .iwill > div > dl > dd br {
-    display: none;
-  }
-
-  /*테스트 끝*/
 }

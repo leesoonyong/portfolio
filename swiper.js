@@ -3,7 +3,7 @@ var mySwiper = new Swiper(".swiper-container", {
   // 3개가 나와야 되는데 1개만 있다면 2개는 빈칸으로 채워서 3개를 만듬
   loopFillGroupWithBlank: true,
 
-  loop: false, // 무한 반복
+  loop: true, // 무한 반복
 
   slidesPerView: 1,
   spaceBetween: 10,
@@ -16,14 +16,19 @@ var mySwiper = new Swiper(".swiper-container", {
     },
     // when window width is >= 480px
     480: {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 30,
     },
     // when window width is >= 640px
     640: {
-      slidesPerView: 3,
+      slidesPerView: 1,
       spaceBetween: 40,
     },
+  },
+
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
   },
 
   navigation: {
@@ -31,4 +36,5 @@ var mySwiper = new Swiper(".swiper-container", {
     nextEl: ".swiper-button-next", // 다음 버튼 클래스명
     prevEl: ".swiper-button-prev", // 이번 버튼 클래스명
   },
+
 });
